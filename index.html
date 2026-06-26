@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Your Way</title>
+    <meta
+      name="description"
+      content="Move Your Way is a kid-friendly exercise binder with earned cards, simple movement levels, and mini-game rewards."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero panel">
+        <div class="brand-pill">Nike Move Your Way</div>
+        <div class="hero-copy">
+          <h1>Small moves become bigger wins.</h1>
+          <p>
+            Pick a move, complete it at your own pace, and only then earn the colorful binder card
+            for that activity. Your rewards open mini-games instead of just pictures.
+          </p>
+        </div>
+
+        <div class="hero-stats" id="heroStats"></div>
+      </header>
+
+      <main class="layout">
+        <section class="library-column">
+          <section class="panel library-panel">
+            <div class="panel-head">
+              <div>
+                <p class="section-kicker">Pick Your Own Move</p>
+                <h2>Choose Your Vibe</h2>
+              </div>
+              <span class="badge-soft" id="tagCount">0 tags on</span>
+            </div>
+            <p class="section-copy">
+              Filter by energy, mood, or where you want to move today. Choose one or more tags to
+              narrow the list.
+            </p>
+            <div class="access-row" id="accessFilters" aria-label="Activity access filters"></div>
+            <div class="tag-filter-row" id="tagFilters" aria-label="Tag filters"></div>
+            <div class="tag-filter-foot">
+              <button class="clear-tags" type="button" id="clearTags">Clear tags</button>
+              <span class="tag-hint">Pick 1 to 3 tags for the easiest results.</span>
+            </div>
+            <div class="move-list" id="moveList" aria-live="polite"></div>
+          </section>
+
+          <section class="panel binder-panel">
+            <div class="panel-head">
+              <div>
+                <p class="section-kicker">Earned Binder</p>
+                <h2>Your Cards</h2>
+              </div>
+              <span class="badge-soft" id="binderBadge">0 earned</span>
+            </div>
+            <p class="section-copy">
+              Cards only show up here after you mark a move complete.
+            </p>
+            <div class="earned-grid" id="earnedGrid"></div>
+          </section>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel detail-panel" id="detailCard">
+            <p class="section-kicker">Selected Move</p>
+            <h2>Choose a move to see the steps</h2>
+            <p>
+              Select a move from the library to check the level, learn the steps, and complete it.
+            </p>
+          </section>
+
+          <section class="panel arcade-panel">
+            <div class="panel-head">
+              <div>
+                <p class="section-kicker">Prize Arcade</p>
+                <h2>Play Pass Rewards</h2>
+              </div>
+              <span class="coin-chip" id="passChip">0 passes</span>
+            </div>
+            <p class="section-copy">
+              Every completed move earns a play pass. Use coins in the arcade shop to buy boosts that
+              make the games more fun and give you a better chance to win.
+            </p>
+            <div class="game-grid" id="gameGrid"></div>
+            <div class="game-stage" id="gameStage">
+              <p class="game-stage-empty">Pick a game to play your reward.</p>
+            </div>
+            <div class="shop-head">
+              <div>
+                <p class="section-kicker">Arcade Shop</p>
+                <h3>Buy Boosts</h3>
+              </div>
+              <span class="coin-chip" id="coinChip">0 coins</span>
+            </div>
+            <div class="shop-grid" id="shopGrid"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <div class="toast-stack" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
